@@ -18,6 +18,51 @@ function mod:onload(material)
     mj:insertIndexed(material.types, material.mat("hat_green", color(29, 84, 14), 1.0))
     mj:insertIndexed(material.types, material.mat("hat_white", color(255, 255, 255), 1.0))
     mj:insertIndexed(material.types, material.mat("hat_brown", color(59, 34, 14), 1.0))
+
+    local materialNames = {
+        "temperateGrassWinter",
+        "temperateGrass",
+        "temperateGrassRich",
+        "taigaGrass",
+        "mediterraneanGrass",
+        "mediterraneanGrassPlentiful",
+        "steppeGrass",
+        "tropicalRainforestGrassRich",
+        "savannaGrass",
+        "savannaGrassPlentiful",
+        "tundraGrass",
+        "tundraGrassPlentiful",
+    }
+
+    for i,name in ipairs(materialNames) do
+        mj:insertIndexed(material.types, material.mat(name, vec3(1.0,1.0,1.0) * 0.7, 0.5))
+    end
+
+    local snowTops = {
+        "tropicalRainforestGrassTops",
+        "tropicalRainforestTallGrassTops",
+        "tropicalRainforestGrassRichTops",
+        "mediterraneanGrassTops",
+        "mediterraneanGrassTopsB",
+        "mediterraneanDarkGrassTops",
+        "savannaGrassTops",
+        "savannaGrassTopsB",
+        "savannaDarkGrassTops",
+        "yellowGrassTops",
+        "darkGrassTops",
+        "steppeGrassTops",
+        "steppeGrassTopsB",
+        "temperateGrassTops",
+        "temperateGrassTopsB",
+        "temperateGrassRichTops",
+        "temperateGrassRichTopsB",
+        "temperateGrassWinterTops",
+        "temperateGrassWinterTopsB",
+    }
+    
+    for i,name in ipairs(snowTops) do
+        mj:insertIndexed(material.types, material.mat(name, vec3(1.0,1.0,1.0) * 0.45, 0.7))
+    end
 end
 
 return mod
